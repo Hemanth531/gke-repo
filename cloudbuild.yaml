@@ -24,7 +24,7 @@ steps:
     - "-c"
     - |
       # Connect to GKE cluster (us-central1 region)
-      gcloud container clusters get-credentials demo-autopilot --region us-central1
+      gcloud container clusters get-credentials autopilot-cluster-1 --region us-central1
       
       # Update container image in Deployment
       kubectl set image deployment/web web=us-central1-docker.pkg.dev/$PROJECT_ID/web-repo/web:$SHORT_SHA
